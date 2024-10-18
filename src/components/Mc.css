@@ -1,0 +1,147 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@font-face {
+  font-family: 'Minecraft';
+  src: url('/public/font/Mine.ttf') format('truetype');
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Lato', 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-touch-callout: none;
+}
+
+.minecraft-font {
+  font-family: 'Minecraft', cursive;
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+@keyframes magic-text {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.btn {
+  @apply px-4 py-2 rounded transition-colors duration-200 text-sm sm:text-base;
+}
+
+.btn-format {
+  @apply px-2 py-1 sm:px-4 sm:py-2 border-2 rounded-lg text-center cursor-pointer transition-colors duration-200 text-xs sm:text-sm;
+}
+
+.btn-format:hover {
+  @apply bg-gray-300 dark:bg-gray-600;
+}
+
+.color-box {
+  @apply cursor-pointer border border-transparent hover:border-gray-500 transition-all duration-200 rounded;
+}
+
+.color-box:hover {
+  @apply transform scale-105;
+}
+
+.btn-primary-dark {
+  @apply bg-gray-700 text-white hover:bg-gray-600 border-2 border-gray-600;
+}
+
+.btn-primary {
+  @apply bg-blue-500 text-white hover:bg-blue-400 border-2 border-blue-500;
+}
+
+.text-input {
+  @apply w-full h-32 p-2 rounded resize-none focus:outline-none focus:ring-2 focus:ring-blue-500;
+  @apply border-2 rounded-lg;
+  font-size: 0.75rem;
+}
+
+.text-input:focus {
+  @apply outline-none border-blue-500 ring-2 ring-blue-500;
+}
+
+.preview-area {
+  @apply border-2 border-gray-300 dark:border-gray-700 shadow-md;
+}
+
+.transition-bg {
+  @apply transition-colors duration-300;
+}
+
+.dark {
+  @apply bg-gray-900 text-white;
+}
+
+.dark .btn-primary {
+  @apply bg-blue-600 hover:bg-blue-700;
+}
+
+.dark .text-input {
+  @apply bg-gray-800 text-white;
+}
+
+.dark .preview-area {
+  @apply bg-gray-800;
+}
+
+.preview-area div {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  overflow-x: hidden;
+}
+
+footer {
+  font-family: 'Afacad Flux', cursive;
+  font-size: 0.75rem;
+  color: #555;
+}
+
+footer a {
+  text-decoration: none;
+  color: #007BFF;
+}
+
+footer a:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+@media (max-width: 640px) {
+  .minecraft-font {
+    font-size: 0.75rem;
+  }
+
+  .btn, .btn-format {
+    font-size: 0.875rem;
+  }
+  
+  .preview-text {
+    font-size: 1.125rem;
+  }
+
+  .text-input {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 641px) {
+  .text-input {
+    font-size: 1.8rem;
+  }
+
+  .preview-text {
+    font-size: 2.125rem;
+  }
+}
